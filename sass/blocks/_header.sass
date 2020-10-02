@@ -1,0 +1,74 @@
+.header
+    display: flex
+    &-top
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 45px
+        border-bottom: 1px solid #D9DADB
+        color: $light
+        &__left, &__right
+            display: flex
+.menu
+    width: 115px
+    height: 100%
+    display: flex
+    align-items: center
+    border-right: 1px solid #D9DADB
+    &__icon
+        margin-right: 15px
+    &__text
+        font-size: 14px
+        line-height: 20px
+        font-weight: 900
+        color: $dark-text
+.search
+    display: flex
+    align-items: center
+    margin-left: 25px
+    margin-right: 50px
+    &__input
+        border: none
+        font-size: 14px
+        line-height: 20px
+        color: $dark-text
+        width: 400px
+        outline: none
+        &:placeholder
+            color: $gray-text
+    &__icon
+        margin-right: 10px
+.subscribe-offer
+    display: flex
+    align-items: center
+    height: 100%
+    text-decoration: none
+    color: $dark-text
+    margin-right: 25px
+    &__title
+        font-size: 12px
+        line-height: 15px
+        font-weight: 900
+        margin: 0
+    &__text
+        font-size: 12px
+        line-height: 15px
+        color: $gray-text
+    &__image
+        width: 66px
+        height: 44px
+        margin-right: 10px
+    &__info
+        display: flex
+        flex-direction: column
+        justify-content: center
+        height: 100%
+.sign-in
+    display: flex
+    align-items: center
+    &__image
+        margin-right: 10px
+    &__text
+        font-size: 14px
+        line-height: 20px
+        color: #4B5157
