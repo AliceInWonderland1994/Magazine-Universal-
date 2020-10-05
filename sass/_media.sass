@@ -13,6 +13,23 @@
     .nav
         &__link
             font-weight: 400
+    .news
+        &__wrapper
+            padding-top: 20px
+    .popular-card
+        padding: 15px
+        &__title
+            font-size: 13px
+            line-height: 20px
+            font-weight: 400
+        &__image
+            width: 60px
+        &__line
+            width: 1px
+            height: 65px
+            background: $text
+            margin-top: 1%
+
 @media screen and ( max-width: 992px )
     .container
         max-width: 780px
@@ -48,7 +65,23 @@
     .nav
         &__link
             font-size: 12px
-        
+    .popular
+        flex-wrap: wrap
+        justify-content: space-between
+        &-card
+            justify-content: space-between
+            flex-basis: 45%
+            &__line
+                display: none
+            &__title
+                font-size: 16px
+                line-height: 25px
+                width: 250px
+                margin: 0
+            &__image
+                width: 50px
+            &:nth-child(-n+3)
+                border-bottom: 1px solid $text
 
 @media screen and ( max-width: 768px )
     .container
@@ -81,6 +114,19 @@
         width: 160px
     .nav
         display: none
+    .popular
+        &-card
+            &__line
+                display: none
+            &__title
+                font-size: 12px
+                line-height: 20px
+                width: 150px
+                margin: 0
+            &__image
+                width: 40px
+            &:nth-child(-n+3)
+                border-bottom: 1px solid $text
 
 @media screen and ( max-width: 576px )
     .container
@@ -98,6 +144,13 @@
         top: 30%
         left: 35%
         width: 130px
+    .popular
+        flex-wrap: wrap
+        &-card
+            justify-content: space-between
+            flex-basis: 100%
+            &:not(:last-child)
+                border-bottom: 1px solid $text
 
 @media ( min-width: 320px ) and ( max-width: 480px )
     .container
