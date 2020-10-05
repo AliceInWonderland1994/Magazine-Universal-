@@ -1,0 +1,38 @@
+@media screen and ( max-width: 1200px )
+    .container
+        max-width: 960px
+
+@media screen and ( max-width: 992px )
+    .container
+        max-width: 760px
+    .search
+        margin-right: 10px
+        margin-left: 15px
+        &__input
+            width: 250px
+    .subscribe
+        &-offer
+            margin-right: 0
+
+@media screen and ( max-width: 768px )
+    .container
+        max-width: 560px
+    .search, .subscribe-offer, .sign-in
+        display: none
+    .mobile-btn
+        display: block
+        width: 20px
+        &__line
+            height: 2px
+            width: 20px
+            background-color: #bdbdbd
+            &:not(:last-child)
+                margin-bottom: 4.5px
+
+@media ( min-width: 320px ) and ( max-width: 480px )
+    .container
+        width: 90%
+    .menu
+        border: none
+        &__text
+            font-size: 13px
