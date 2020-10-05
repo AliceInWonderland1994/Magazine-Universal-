@@ -1,10 +1,18 @@
 @media screen and ( max-width: 1200px )
     .container
         max-width: 960px
-
+    .liberty
+        &-info
+            &__image
+                margin-left: 20px
+                margin-right: 10px
+    .logo
+        left: 43%
+    .weather
+        margin: 0
 @media screen and ( max-width: 992px )
     .container
-        max-width: 760px
+        max-width: 780px
     .search
         margin-right: 10px
         margin-left: 15px
@@ -13,10 +21,32 @@
     .subscribe
         &-offer
             margin-right: 0
+    .liberty
+        &-info
+            &__image
+                margin-left: 0px
+                margin-right: 10px
+            &__text
+                font-size: 12px
+                width: 120px
+    .logo
+        width: 150px
+        left: 41%
+    .date
+        width: 150px
+        &__info
+            font-size: 12px
+    .weather
+        &__image
+            width: 15px
+        &__info
+            font-size: 12px
+            margin-left: 5px
+        
 
 @media screen and ( max-width: 768px )
     .container
-        max-width: 560px
+        max-width: 576px
     .search, .subscribe-offer, .sign-in
         display: none
     .mobile-btn
@@ -28,6 +58,38 @@
             background-color: #bdbdbd
             &:not(:last-child)
                 margin-bottom: 4.5px
+    .liberty
+        &-info
+            width: 100%
+            justify-content: space-between
+            &__text
+                display: none
+    .logo
+        left: 37%
+    .date-and-weather
+        flex-direction: column
+        width: 160px
+    .date, .weather
+        display: flex
+        justify-content: flex-end
+        width: 160px
+
+@media screen and ( max-width: 576px )
+    .container
+        width: 90%
+    .header
+        &-bottom
+            height: 60px
+    .liberty
+        &-info
+            &__image
+                height: 60px
+            &__text
+                display: none
+    .logo
+        top: 30%
+        left: 35%
+        width: 130px
 
 @media ( min-width: 320px ) and ( max-width: 480px )
     .container
@@ -36,3 +98,29 @@
         border: none
         &__text
             font-size: 13px
+    .header
+        &-bottom
+            height: 55px
+    .liberty
+        &-info
+            &__image
+                height: 50px
+    .date-and-weather
+        flex-direction: row
+        align-items: flex-end
+        justify-content: center
+        width: 100%
+        height: 100%
+    .date
+        display: flex
+        justify-content: flex-end
+        width: 140px
+    .weather
+        display: flex
+        justify-content: flex-end
+        width: 70px
+    .logo
+        top: 15%
+        right: 0
+        left: auto
+        width: 110px
