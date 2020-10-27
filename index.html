@@ -6,6 +6,8 @@
     <title>Universal Magazine</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.5.1.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -83,77 +85,146 @@
             <div class="news__wrapper">
                 <div class="popular">
                     <div class="popular-card">
-                        <h4 class="popular-card__title">25 Songs That Tell Us Where Music Is Going</h4>
+                        <a href="https://www.nytimes.com/interactive/2018/03/08/magazine/25-songs-future-of-music.html#/intro" target="_blank" class="popular-card__title">25 Songs That Tell Us Where Music Is Going</a>
                         <img src="img/guitar.png" alt="guitar" class="popular-card__image">
                     </div>
                     <div class="popular__line"></div>
                     <div class="popular-card">
-                        <h4 class="popular-card__title">These Ancient Assassins Eat Their Own Kind</h4>
+                        <a href="https://www.nytimes.com/video/science/100000005768876/pelican-spiders-ancient-assassins-that-eat-their-own-kind.html" target="_blank" class="popular-card__title">These Ancient Assassins Eat Their Own Kind</a>
                         <img src="img/butterfly.png" alt="butterfly" class="popular-card__image">
                     </div>
                     <div class="popular__line"></div>
                     <div class="popular-card">
-                        <h4 class="popular-card__title">How Do You Teach People to Love Difficult Music?</h4>
+                        <a href="https://www.nytimes.com/2018/03/09/arts/music/carnegie-hall-ligeti-alarm-will-sound.html" target="_blank" class="popular-card__title">How Do You Teach People to Love Difficult Music?</a>
                         <img src="img/man.png" alt="man" class="popular-card__image">
                     </div>
                     <div class="popular__line"></div>
                     <div class="popular-card">
-                        <h4 class="popular-card__title">International Soccer’s Man of Mystery</h4>
+                        <a href="https://www.nytimes.com/2018/03/09/sports/soccer-jarvis.html" target="_blank" class="popular-card__title">International Soccer’s Man of Mystery</a>
                         <img src="img/road.png" alt="road" class="popular-card__image">
                     </div>
                 </div>
                 <!-- /.popular -->
-                <div class="tabs">
-                    <div class="media">
-                        <img src="img/nature.png" alt="mountains" class="media__picture">
-                        <div class="author">
-                            <img src="img/author.png" alt="Benjamin Turner" class="author__avatar">
-                            <div class="author__info">
-                                <h5 class="author__name">By Benjamin Turner</h5>
-                                <span class="author__description">Traveler</span>
-                            </div>
-                        </div>
-                        <span class="destinations">Destinations</span>
-                        <div class="buttons">
-                            <a href="#" class="buttons__link">Read more<img src="img/arrow.svg" alt="arrow-right" class="buttons__arrow"></a>
-                            <div class="buttons-player">
-                                <a href="#" class="buttons-player__play"><img src="img/play.svg" alt="button: play"></a>
-                                <div class="buttons-player__group">
-                                    <h4 class="buttons-player__title">The chalk cliff of Beachy Head</h4>
-                                    <span class="buttons-player__duration">18:05</span>
+                    <div class="tab">
+                            <div class="media media--active" id="travel">
+                                <img src="img/nature.png" alt="mountains" class="media__picture">
+                                <div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/qX-khoqC_io" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                                <div class="author">
+                                    <img src="img/author.png" alt="Benjamin Turner" class="author__avatar">
+                                    <div class="author__info">
+                                        <h5 class="author__name">By Benjamin Turner</h5>
+                                        <span class="author__description">Traveler</span>
+                                    </div>
+                                </div>
+                                <span class="destinations">Destinations</span>
+                                <div class="buttons">
+                                    <a href="https://www.nytimes.com/2020/10/19/travel/tongass-national-forest-alaska.html?searchResultPosition=8" target="_blank" class="buttons__link">Read more<img src="img/arrow.svg" alt="arrow-right" class="buttons__arrow"></a>
+                                    <div class="buttons-player">
+                                        <a href="#" class="buttons-player__play"><img src="img/play.svg" alt="button: play"></a>
+                                        <div class="buttons-player__group">
+                                            <a href="https://www.youtube.com/watch?v=qX-khoqC_io&feature=emb_title" target="_blank" class="buttons-player__title">Beachy Head, Sussex Drone Flight (4K)</a>
+                                            <span class="buttons-player__duration">3:33</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- /.media -->
+                            <div class="media" id="cars">
+                                <img src="img/car.jpg" alt="car" class="media__picture">
+                                <div class="author">
+                                    <img src="img/author-3.jpg" alt="Jack Noah" class="author__avatar">
+                                    <div class="author__info">
+                                        <h5 class="author__name">By Jack Noah</h5>
+                                        <span class="author__description">Journalist</span>
+                                    </div>
+                                </div>
+                                <span class="destinations">Destinations</span>
+                                <div class="buttons">
+                                    <a href="https://www.nytimes.com/2017/08/31/automobiles/wheels/storm-car-dealers.html#:~:text=As%20Harvey%20moved%20on%20and,were%20doing%20a%20brisk%20business." target="_blank"  class="buttons__link">Read more<img src="img/arrow.svg" alt="arrow-right" class="buttons__arrow"></a>
+                                </div>
+                            </div>
+                            <!-- /.media -->
+                            <div class="media" id="movies">
+                                <img src="img/movie.jpg" alt="movie" class="media__picture">
+                                <div class="author">
+                                    <img src="img/author-2.jpg" alt="Sarah Jay" class="author__avatar">
+                                    <div class="author__info">
+                                        <h5 class="author__name">By Sarah Jay</h5>
+                                        <span class="author__description">Film critic</span>
+                                    </div>
+                                </div>
+                                <span class="destinations">Destinations</span>
+                                <div class="buttons">
+                                    <a href="https://www.nytimes.com/2017/08/31/arts/television/valor-seal-team-the-brave.html" target="_blank" class="buttons__link">Read more<img src="img/arrow.svg" alt="arrow-right" class="buttons__arrow"></a>
+                                </div>
+                            </div>
+                            <!-- /.media -->
+                            <div class="media" id="nfl">
+                                <img src="img/nfl.jpg" alt="National Football League" class="media__picture">
+                                <div class="video-nfl"><iframe width="560" height="315" src="https://www.youtube.com/embed/6x9qoAvOuoU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                                <div class="author">
+                                    <img src="img/author-4.png" alt="Ralf McDowell" class="author__avatar">
+                                    <div class="author__info">
+                                        <h5 class="author__name">By Ralf McDowell </h5>
+                                        <span class="author__description">Sportscaster</span>
+                                    </div>
+                                </div>
+                                <span class="destinations">Destinations</span>
+                                <div class="buttons">
+                                    <a href="https://www.usatoday.com/story/sports/2017/07/12/surprising-nfl-all-time-career-stat-leaders/463396001/" target="_blank" class="buttons__link">Read more<img src="img/arrow.svg" alt="arrow-right" class="buttons__arrow"></a>
+                                    <a href="#" class="buttons-player__play-2"><img src="img/play.svg" alt="button: play"></a>
+                                    <div class="buttons-player__group">
+                                        <a href="https://www.youtube.com/watch?v=6x9qoAvOuoU" target="_blank" class="buttons-player__title">Top Catches from Week 7 | NFL 2020 Highlights</a>
+                                        <span class="buttons-player__duration">7:12</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.media -->
+                            <div class="media" id="tech">
+                                <img src="img/tech.jpg" alt="Tech Reviews" class="media__picture">
+                                <div class="author">
+                                    <img src="img/author-5.jpg" alt="Frederick Robertson" class="author__avatar">
+                                    <div class="author__info">
+                                        <h5 class="author__name">By Frederick Robertson</h5>
+                                        <span class="author__description">Tech rewiewer</span>
+                                    </div>
+                                </div>
+                                <span class="destinations">Destinations</span>
+                                <div class="buttons">
+                                    <a href="https://www.reviewed.com/home-outdoors/best-right-now/the-best-bookcases-you-can-buy-online-and-assemble-yourself" target="_blank" class="buttons__link">Read more<img src="img/arrow.svg" alt="arrow-right" class="buttons__arrow"></a>
+                                </div>
+                            </div>
+                            <!-- /.media -->
+                        <div class="categories">
+                            <h3 class="categories__title">Recommended for you</h3>
+                            <div class="categories__tab categories__tab--active"  data-target="#travel">
+                                <h4 class="categories__item categories__item--food">Travel</h4>
+                                <span class="categories__text">Travelling is the most exciting thing in the world
+                                    <img src="img/play-black.svg" alt="button: play" class="categories__image">
+                                </span>
+                            </div>
+                            <div class="categories__tab"  data-target="#cars">
+                                <h4 class="categories__item categories__item--cars">Cars</h4>
+                                <span class="categories__text">Storm Has Car Dealers Doing Swift Business</span>
+                            </div>
+                            <div class="categories__tab"  data-target="#movies">
+                                <h4 class="categories__item categories__item--movies">Movies</h4>
+                                <span class="categories__text">War Is Hell? In New Military Dramas, It’s One-Dimensional</span>
+                            </div>
+                            <div class="categories__tab"  data-target="#nfl">
+                                <h4 class="categories__item categories__item--nfl">NFL</h4>
+                                <span class="categories__text">11 surprising stat rankings for active NFL players
+                                    <img src="img/play-black.svg" alt="button: play" class="categories__image">
+                                </span>
+                            </div>
+                            <div class="categories__tab"  data-target="#tech">
+                                <h4 class="categories__item categories__item--tech">Tech Reviews</h4>
+                                <span class="categories__text">The bookcases you can buy online and assemble yourself</span>
+                            </div>
                         </div>
+                        <!-- /.categories -->
                     </div>
-                    <!-- /.media -->
-                    <div class="categories">
-                        <h3 class="categories__title">Recommended for you</h3>
-                        <div class="categories__tab categories__tab--food">
-                            <h4 class="categories__item">Food</h4>
-                            <span class="categories__text">For Chicken-Fried Steak, Too Much Is Just Enough</span>
-                            <img src="img/play-black.svg" alt="button: play" class="categories__image">
-                        </div>
-                        <div class="categories__tab">
-                            <h4 class="categories__item">Cars</h4>
-                            <span class="categories__text">Storm Has Car Dealers Doing Swift Business</span>
-                        </div>
-                        <div class="categories__tab">
-                            <h4 class="categories__item">Movies</h4>
-                            <span class="categories__text">War Is Hell? In New Military Dramas, It’s One-Dimensional</span>
-                        </div>
-                        <div class="categories__tab">
-                            <h4 class="categories__item">NFL</h4>
-                            <span class="categories__text">11 surprising stat rankings for active NFL players</span>
-                            <img src="img/play-black.svg" alt="button: play" class="categories__image">
-                        </div>
-                        <div class="categories__tab">
-                            <h4 class="categories__item">Tech Reviews</h4>
-                            <span class="categories__text">The bookcases you can buy online and assemble yourself</span>
-                        </div>
-                    </div>
-                    <!-- /.categories -->
-                </div>
-                <!-- /.tabs -->
+                    <!-- /.tab -->
             </div>
         </div>
     </section>

@@ -4,25 +4,26 @@
         height: 950px
         padding: 30px 0
 .popular
-    background-color: #30363D
     display: flex
+    justify-content: space-between
+    background-color: #30363D
     border-radius: 10px
+    padding: 25px 25px 30px
     &-card
         display: flex
         align-items: center
-        padding: 25px 25px 30px
+        justify-content: space-between
+        &:not(:last-child)
+            width: 259px
+            border-right: 1px solid #4B5157
+            padding-right: 25px
         &__title
+            color: $light
+            width: 154px
+            text-decoration: none
             font-family: Roboto Slab
             font-style: normal
             font-weight: 700
             font-size: 16px
             line-height: 25px
-            margin: 0 15px 0 0
-            color: $light
-            width: 170px
-    &__line
-        width: 1px
-        height: 75px
-        background: $text
-        margin-top: 2%
 

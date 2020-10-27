@@ -16,19 +16,19 @@
     .news
         &__wrapper
             padding-top: 20px
-    .popular-card
-        padding: 15px
-        &__title
-            font-size: 13px
-            line-height: 20px
-            font-weight: 400
-        &__image
-            width: 60px
-        &__line
-            width: 1px
-            height: 65px
-            background: $text
-            margin-top: 1%
+    .popular
+        padding: 15px 0
+        &-card
+            padding: 0 15px
+            &:not(:last-child)
+                padding-right: 15px
+            &__title
+                width: 130px
+                font-size: 13px
+                line-height: 20px
+                font-weight: 400
+            &__image
+                width: 60px
 
 @media screen and ( max-width: 992px )
     .container
@@ -65,14 +65,23 @@
     .nav
         &__link
             font-size: 12px
+    .tab
+        height: 50% 
     .popular
         flex-wrap: wrap
         justify-content: space-between
         &-card
             justify-content: space-between
-            flex-basis: 45%
-            &__line
-                display: none
+            flex-basis: 50%
+            border-right: none
+            margin: 0
+            padding: 15px
+            &:not(:last-child)
+                border: none
+            &:nth-child(-n+3)
+                border-bottom: 1px solid #4B5157
+            &:nth-child(1), &:nth-child(5)
+                border-right: none         
             &__title
                 font-size: 16px
                 line-height: 25px
@@ -80,8 +89,6 @@
                 margin: 0
             &__image
                 width: 50px
-            &:nth-child(-n+3)
-                border-bottom: 1px solid $text
 
 @media screen and ( max-width: 768px )
     .container
@@ -116,8 +123,9 @@
         display: none
     .popular
         &-card
-            &__line
-                display: none
+            &:nth-child(-n+3)
+                border-right: none
+                border-bottom: 1px solid #4B5157
             &__title
                 font-size: 12px
                 line-height: 20px
@@ -125,8 +133,6 @@
                 margin: 0
             &__image
                 width: 40px
-            &:nth-child(-n+3)
-                border-bottom: 1px solid $text
 
 @media screen and ( max-width: 576px )
     .container
@@ -146,11 +152,16 @@
         width: 130px
     .popular
         flex-wrap: wrap
+        padding: 0
         &-card
             justify-content: space-between
             flex-basis: 100%
+            padding: 10px
             &:not(:last-child)
-                border-bottom: 1px solid $text
+                border-bottom: 1px solid #4B5157
+            &__title
+                font-size: 10px
+                line-height: 14px
 
 @media ( min-width: 320px ) and ( max-width: 480px )
     .container
