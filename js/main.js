@@ -23,6 +23,27 @@ const videoPlay = function (button, video) {
 
         video.classList.toggle('video--active');
     });
+
 };
 videoPlay(buttonPlay, video);
 videoPlay(buttonPlayNfl, videoNfl);
+
+const closeVideo = function (video) {
+    document.addEventListener('keydown', function (evt) {
+        if(evt.key === 'Escape') {
+            video.classList.remove('video--active');
+        };
+    });
+};
+closeVideo(video);
+closeVideo(videoNfl);
+
+const openVideo = function (video) {
+    document.addEventListener('keydown', function (evt) {
+        if(evt.key === 'Enter') {
+            video.classList.add('video--active');
+        };
+    });
+};
+closeVideo(video);
+closeVideo(videoNfl);

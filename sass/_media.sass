@@ -29,6 +29,8 @@
                 font-weight: 400
             &__image
                 width: 60px
+    .video, .video-nfl
+        left: 55px
 
 @media screen and ( max-width: 992px )
     .container
@@ -66,10 +68,52 @@
         &__link
             font-size: 12px
     .tab
-        height: 50% 
+        height: 50%
+    .media
+        height: 100%
+        padding: 30px 30px 55px
+        &__picture
+            width: 140%
+            object-position: -80px -20px
+    .categories
+        width: 115px
+        &__tab
+            padding: 26px 15px
+            width: 100%
+            &:hover
+                background-color: #f5f5f5
+                &:last-child
+                    padding-bottom: 16px
+            &--active
+                background-color: #f5f5f5
+                &:last-child
+                    padding-bottom: 16px
+        &__title
+            font-size: 10px
+            text-align: center
+            padding: 10px 17px
+        &__item
+            font-size: 12px
+            text-align: center
+        &__text
+           display: none
+        &__image
+            display: none
+    .video, .video-nfl
+        left: 0px
+    .buttons
+        flex-direction: column
+        align-items: flex-start
+        &__link
+            margin-bottom: 30px
+        &-group
+            display: flex
+            flex-direction: row
+            align-items: center
     .popular
         flex-wrap: wrap
         justify-content: space-between
+        padding: 0
         &-card
             justify-content: space-between
             flex-basis: 50%
@@ -133,7 +177,42 @@
                 margin: 0
             &__image
                 width: 40px
-
+    .tab
+        height: 40%
+        flex-direction: column
+    .media
+        width: 100%
+        border-radius: 10px 10px 0 0
+        padding: 25px
+        &__picture
+            width: 120%  
+            object-position: 0px -20px
+            &--travel
+                object-position: 0px -60px
+            &--cars
+               object-position: -40px -120px          
+    .categories
+        height: 76px
+        display: flex
+        width: 100%
+        &__title
+            display: flex
+            align-items: center
+            font-size: 12px
+    .video
+        bottom: 0
+        right: 0
+        top: 0
+        &__iframe
+            width: 100%
+            height: 100%
+        &-nfl
+            bottom: 0
+            right: 0
+            top: 0
+            &__iframe
+                width: 100%
+                height: 100%
 @media screen and ( max-width: 576px )
     .container
         width: 90%
@@ -157,11 +236,11 @@
             justify-content: space-between
             flex-basis: 100%
             padding: 10px
+            &__title
+                font-size: 12px
+                line-height: 14px
             &:not(:last-child)
                 border-bottom: 1px solid #4B5157
-            &__title
-                font-size: 10px
-                line-height: 14px
 
 @media ( min-width: 320px ) and ( max-width: 480px )
     .container
