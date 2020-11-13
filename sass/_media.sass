@@ -83,15 +83,16 @@
             &:hover
                 background-color: #f5f5f5
                 &:last-child
-                    padding-bottom: 16px
+                    padding-bottom: 21px
             &--active
                 background-color: #f5f5f5
                 &:last-child
-                    padding-bottom: 16px
+                    padding-bottom: 21px
         &__title
             font-size: 10px
             text-align: center
             padding: 10px 17px
+            border-radius: 10px
         &__item
             font-size: 12px
             text-align: center
@@ -133,6 +134,7 @@
                 margin: 0
             &__image
                 width: 50px
+    
 
 @media screen and ( max-width: 768px )
     .container
@@ -178,7 +180,7 @@
             &__image
                 width: 40px
     .tab
-        height: 40%
+        height: 38%
         flex-direction: column
     .media
         width: 100%
@@ -192,13 +194,22 @@
             &--cars
                object-position: -40px -120px          
     .categories
-        height: 76px
+        height: 58px
         display: flex
         width: 100%
         &__title
             display: flex
             align-items: center
             font-size: 12px
+        &__item
+            margin: 0
+        &__tab
+            &:not(:last-child)
+                border-bottom: 0
+                border-right: 1px solid #D9DADB
+                padding: 20px 15px
+            &:last-child
+                padding: 15px
     .video
         bottom: 0
         right: 0
@@ -213,6 +224,7 @@
             &__iframe
                 width: 100%
                 height: 100%
+
 @media screen and ( max-width: 576px )
     .container
         width: 90%
@@ -241,6 +253,58 @@
                 line-height: 14px
             &:not(:last-child)
                 border-bottom: 1px solid #4B5157
+    .tab
+        height: 30%
+        flex-direction: column
+    .media
+        width: 100%
+        border-radius: 10px 10px  0 0
+        padding: 25px
+        &__picture
+            width: 120%  
+            object-position: 0px 0px
+            &--travel
+                object-position: 0px 0px
+            &--cars
+               object-position: -40px -10px
+    .categories
+        height: 45px
+        flex-wrap: wrap
+        &__title
+            width: 100%
+            justify-content: center
+            padding: 15px
+            background-color: $light
+        &__tab
+            &:not(:last-child)
+                border-bottom: 1px solid #D9DADB
+                padding: 15px 10px
+                border-right: none
+            &:last-child
+                border-radius: 0 0 10px 10px
+                &:hover
+                    padding-bottom: 15px
+                    border-radius: 0 0 10px 10px
+        &__item
+            font-size: 11px
+            margin: 0
+        &__arrow
+            display: block
+            margin-left: 20px
+    .video
+        bottom: 0
+        right: 0
+        top: 0
+        &__iframe
+            width: 100%
+            height: 100%
+        &-nfl
+            bottom: 0
+            right: 0
+            top: 0
+            &__iframe
+                width: 100%
+                height: 100%
 
 @media ( min-width: 320px ) and ( max-width: 480px )
     .container
@@ -275,3 +339,10 @@
         right: 0
         left: auto
         width: 110px
+    .media
+        &__picture
+            width: 120%
+            &--travel
+                object-position: 0px 0px
+            &--cars
+               object-position: -40px 0px

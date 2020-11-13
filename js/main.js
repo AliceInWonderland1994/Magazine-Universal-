@@ -25,8 +25,6 @@ const videoPlay = function (button, video) {
     });
 
 };
-videoPlay(buttonPlay, video);
-videoPlay(buttonPlayNfl, videoNfl);
 
 const closeVideo = function (video) {
     document.addEventListener('keydown', function (evt) {
@@ -35,15 +33,8 @@ const closeVideo = function (video) {
         };
     });
 };
-closeVideo(video);
-closeVideo(videoNfl);
 
-const openVideo = function (video) {
-    document.addEventListener('keydown', function (evt) {
-        if(evt.key === 'Enter') {
-            video.classList.add('video--active');
-        };
-    });
-};
+videoPlay(buttonPlay, video);
+videoPlay(buttonPlayNfl, videoNfl);
 closeVideo(video);
 closeVideo(videoNfl);

@@ -56,6 +56,10 @@
     &__image
         vertical-align: bottom
         margin-left: 5px
+    &__arrow
+        display: none
+    &__group
+        width: 100%
 .triangle
     position: absolute
     left: -13px
@@ -155,7 +159,6 @@
         &__group
             flex-direction: column
             align-items: flex-start
-            color: $light
         &__title
             display: block
             color: $light
@@ -171,6 +174,7 @@
             display: inline-block
             font-size: 12px
             line-height: 15px
+            color: $light
             opacity: 0.4
 .video, .video-nfl
     display: none
@@ -181,4 +185,6 @@
         display: block
     &__iframe
         width: 560px
-        height: 325px
+        height: 315px
+.hidden
+    display: none
